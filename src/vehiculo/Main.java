@@ -8,14 +8,20 @@ package vehiculo;
 public class Main {
     
       public static void main(String[] args) {
-        Vehiculo miVehiculo;
+        VehiculoRiveraSanchezGemaMaria2223 miVehiculoRiveraSanchezGemaMaria2223;
         int stockActual;
         
-        miVehiculo = new Vehiculo("Seat",18000,100);
-        try 
+        miVehiculoRiveraSanchezGemaMaria2223 = new VehiculoRiveraSanchezGemaMaria2223("Seat",18000,100);
+        operativaVehiculosRiveraSanchezGemaMaria2223(miVehiculoRiveraSanchezGemaMaria2223, 50); 
+        stockActual = miVehiculoRiveraSanchezGemaMaria2223.obtenerStock();
+        System.out.println("El stock actual es"+ stockActual );
+    }
+
+    private static void operativaVehiculosRiveraSanchezGemaMaria2223(VehiculoRiveraSanchezGemaMaria2223 miVehiculoRiveraSanchezGemaMaria2223, int cantidad) {
+        try
         {
             System.out.println("Venta de Vehiculos");
-            miVehiculo.vender(20);
+            miVehiculoRiveraSanchezGemaMaria2223.vender(20);
         } catch (Exception e)
         {
             System.out.print("Fallo al vender");
@@ -24,13 +30,11 @@ public class Main {
         try
         {
             System.out.println("Compra de Vehiculos");
-            miVehiculo.comprar(100);
+            miVehiculoRiveraSanchezGemaMaria2223.comprar(100);
         } catch (Exception e)
         {
             System.out.print("Fallo al comprar");
         }
-        stockActual = miVehiculo.obtenerStock();
-        System.out.println("El stock actual es"+ stockActual );
     }
 
 }
